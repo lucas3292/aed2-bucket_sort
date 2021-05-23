@@ -54,15 +54,21 @@ void bucket_sort(int *vet, int num){
 
 int main(){
 
-    int i, j,n = 1000, vet1[n],vet2[n],vet3[n],vet4[n],vet5[n];
-    //srand(time(NULL));
-    /*
-    VETOR TOTALMENTE DESORDENADO 
+    int i, j,n = 10, vet1[n],vet2[n],vet3[n],vet4[n],vet5[n];
+    srand(time(NULL));
+    
+    //VETOR TOTALMENTE DESORDENADO 
 
     for(i = 0; i < n; i++){
         vet5[i] = rand();
+        printf("%d\n",vet5[i]);
     }
-    --------------------------------
+    bucket_sort(vet5,n);
+    for(i = 0; i < n; i++){
+        vet5[i] = i;
+       printf("result %d\n",vet5[i]);
+    }
+    /*--------------------------------
     VETOR ORDENADO DECRESCENTEMENTE
 
     for(i = n; i > 0; i--){
@@ -91,7 +97,7 @@ int main(){
     }
     -------------------------------
     Primeira metade ordenada decrescente, segunda metade ordenada crescentemente
-    */
+    
     j=0;
     for(i = n; i > (n/2)-1; i--){
         vet4[j] = i;
@@ -109,7 +115,7 @@ int main(){
     for(i = 0; i < n; i++){
         vet4[i] = i;
        printf("result %d\n",vet4[i]);
-    }
+    }*/
 
     return 0;
    
